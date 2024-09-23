@@ -1,0 +1,33 @@
+name: "project-management"
+
+
+services:
+  helper:
+    # image: eloufirhatim/helper:latest
+    build: .
+    container_name: helper-server
+    environment:
+      - APP_URL=http://vnsmterht01:8002
+      - DB_CONNECTION=mysql
+      - DB_HOST=sqldb
+      - DB_PORT=3306
+      - DB_DATABASE=helper
+      - DB_USERNAME=helper
+      - DB_PASSWORD=Pn7wUteXkDJ7ot
+      - MAIL_MAILER=smtp
+      - MAIL_HOST=smtp2.tti.com.hk
+      - MAIL_PORT=25
+      - MAIL_USERNAME=miltestlab.noreply@ttigroup.com.vn
+      - MAIL_PASSWORD=your_password
+      - MAIL_ENCRYPTION=null
+    networks:
+      - iot-stack_iot-bridge
+    restart: "always"
+    ports:
+      - 8002:8000
+    volumes:
+      - /etc/localtime:/etc/localtime
+
+networks:
+      iot-stack_iot-bridge:
+        external: true
