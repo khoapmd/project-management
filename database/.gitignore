@@ -1,3 +1,6 @@
 *.sqlite*
-default_data.sql
-DefaultUserSeeder.php
+# Ignore default_data.sql in any folder
+**/default_data.sql
+
+# Ignore DefaultUserSeeder.php in any folder
+**/DefaultUserSeeder.php
