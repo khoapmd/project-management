@@ -146,7 +146,7 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (46, 1);
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`, `deleted_at`, `creation_token`) VALUES
-(1, 'Zero Phan', 'admin@helper.app', '2022-11-14 12:06:56', '$2y$10$ljntAHCDUw/.ZxSi8GSMq.WTEbVC.4/TO/on01JqvOQYaow49VAW6', NULL, NULL, NULL, NULL, '2022-11-14 12:06:56', '2022-11-14 12:06:56', NULL, '16a26769-e643-4570-b3d6-9b9604fe49bc');
+(1, 'Zero Phan', 'minhdangkhoa.phan@ttigroup.com.vn', '2022-11-14 12:06:56', '$2y$10$EYnSjWhdBTy9UDRX6l37AuPaOivJae/zvlRkGb5EGiJGUwQdXCEJO', NULL, NULL, NULL, NULL, '2022-11-14 12:06:56', '2022-11-14 12:06:56', NULL, '16a26769-e643-4570-b3d6-9b9604fe49bc');
 
 INSERT INTO `settings` (`id`, `group`, `name`, `locked`, `payload`, `created_at`, `updated_at`) VALUES
 (1, 'general', 'site_name', 0, '\"Project Management\"', '2022-11-14 18:11:50', '2022-11-14 18:11:50'),
