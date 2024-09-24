@@ -27,7 +27,16 @@ services:
       - 8002:8000
     volumes:
       - /etc/localtime:/etc/localtime
+      - storage_data:/app/storage
 
 networks:
       iot-stack_iot-bridge:
         external: true
+
+volumes:
+  storage_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /data1/project_management/storage
