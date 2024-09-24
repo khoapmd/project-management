@@ -17,7 +17,7 @@ class UserPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->can('List users');
+        return $user->can('List users') || $user->isAdmin;
     }
 
     /**
@@ -29,7 +29,7 @@ class UserPolicy
      */
     public function view(User $user, User $model)
     {
-        return $user->can('View user');
+        return $user->can('View user') || $user->isAdmin;
     }
 
     /**
@@ -40,7 +40,7 @@ class UserPolicy
      */
     public function create(User $user)
     {
-        return $user->can('Create user');
+        return $user->can('Create user') || $user->isAdmin;
     }
 
     /**
@@ -52,7 +52,7 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        return $user->can('Update user');
+        return $user->can('Update user') || $user->isAdmin;
     }
 
     /**
