@@ -1,1 +1,3 @@
 *.sqlite*
+default_data.sql
+DefaultUserSeeder.php
