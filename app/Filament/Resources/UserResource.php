@@ -36,6 +36,12 @@ class UserResource extends Resource
         return __('Permissions');
     }
 
+    // Add this method to conditionally show/hide the User resource based on admin status
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return auth()->user() && auth()->user()->isAdmin;
+    }
+
     public static function form(Form $form): Form
     {
         return $form
