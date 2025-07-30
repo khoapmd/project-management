@@ -21,7 +21,7 @@ services:
       - MAIL_PASSWORD=your_password
       - MAIL_ENCRYPTION=null
       - MAIL_FROM_ADDRESS=noreply@ttigroup.com.vn
-      - MAIL_FROM_NAME=Project Management
+      - MAIL_FROM_NAME=Project Management System
     networks:
       - iot-stack_iot-bridge
     restart: "always"

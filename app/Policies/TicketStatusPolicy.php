@@ -67,4 +67,15 @@ class TicketStatusPolicy
     {
         return $user->can('Delete ticket status');
     }
+
+    /**
+     * Determine whether the user can delete multiple models at once.
+     *
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Auth\Access\Response|bool
+     */
+    public function deleteAny(User $user)
+    {
+        return $user->can('Delete user')|| $user->isAdmin; // Ensures the user has permission to delete any users
+    }
 }
